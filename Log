@@ -1,0 +1,26 @@
+2021-09-25 10:18:08,243 — werkzeug — WARNING —  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-25 10:18:08,243 — werkzeug — INFO —  * Running on http://192.168.1.44:4001/ (Press CTRL+C to quit)
+2021-09-25 10:19:23,863 — werkzeug — INFO — 127.0.0.1 - - [25/Sep/2021 10:19:23] "[31m[1mPOST /leavemanagement/welcome HTTP/1.1[0m" 405 -
+2021-09-25 10:19:44,671 — werkzeug — INFO — 127.0.0.1 - - [25/Sep/2021 10:19:44] "GET /leavemanagement/welcome HTTP/1.1" 200 -
+2021-09-25 10:27:50,531 — werkzeug — WARNING —  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-25 10:27:50,531 — werkzeug — INFO —  * Running on http://192.168.1.44:4001/ (Press CTRL+C to quit)
+2021-09-25 10:28:00,524 — werkzeug — INFO — 127.0.0.1 - - [25/Sep/2021 10:28:00] "GET /leavemanagement/welcome HTTP/1.1" 200 -
+2021-09-25 10:36:37,611 — werkzeug — INFO — 127.0.0.1 - - [25/Sep/2021 10:36:37] "POST /leavemanagement/ragister HTTP/1.1" 200 -
+2021-09-25 10:37:04,456 — werkzeug — WARNING —  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-25 10:37:04,456 — werkzeug — INFO —  * Running on http://192.168.1.44:4001/ (Press CTRL+C to quit)
+2021-09-25 10:37:55,817 — werkzeug — WARNING —  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-25 10:37:55,817 — werkzeug — INFO —  * Running on http://192.168.1.44:4001/ (Press CTRL+C to quit)
+2021-09-25 10:38:06,613 — werkzeug — INFO — 127.0.0.1 - - [25/Sep/2021 10:38:06] "POST /leavemanagement/ragister HTTP/1.1" 200 -
+2021-09-25 10:38:58,837 — werkzeug — WARNING —  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-25 10:38:58,837 — werkzeug — INFO —  * Running on http://192.168.1.44:4001/ (Press CTRL+C to quit)
+2021-09-25 10:39:21,171 — werkzeug — INFO — 127.0.0.1 - - [25/Sep/2021 10:39:21] "POST /leavemanagement/ragister HTTP/1.1" 200 -
+2021-09-25 10:39:35,185 — werkzeug — INFO — 127.0.0.1 - - [25/Sep/2021 10:39:35] "POST /leavemanagement/ragister HTTP/1.1" 200 -
+2021-09-25 10:39:39,814 — werkzeug — WARNING —  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-25 10:39:39,814 — werkzeug — INFO —  * Running on http://192.168.1.44:4001/ (Press CTRL+C to quit)
+2021-09-25 10:39:42,838 — werkzeug — INFO — 127.0.0.1 - - [25/Sep/2021 10:39:42] "POST /leavemanagement/ragister HTTP/1.1" 200 -
