@@ -14,14 +14,78 @@ file_handler = TimedRotatingFileHandler(LOG_FILE, when='midnight')
 file_handler.setFormatter(FORMATTER)
 logger.addHandler(file_handler)
 logger.propagate = False
+import master_type
+import employee
 
 @app.route('/leavemanagement/welcome')
 def hello_world():
     return 'Welcome to Leave management framework!'
 
+
+@app.route('/leavemanagement/master',methods=['POST'])
+def master():
+    if request.method == 'POST':
+        try:
+            if "application/json" == request.headers["Content-Type"]:
+
+                # status, msg = leave_register.validateUser(request)
+                # if status == False:
+                #     response = app.response_class(
+                #         response=json.dumps({'message': msg}, default=np_encoder, indent=4),
+                #         mimetype='application/json'
+                #     )
+                #     return response
+                try:
+                    data = master_type.masterData(request)
+                    response = app.response_class(
+                        response=json.dumps(data, default=np_encoder, indent=4),
+                        mimetype='application/json'
+                    )
+                    return response
+                except Exception as e:
+                    print(str(e))
+
+        except Exception as e:
+            print(str(e))
+            response = app.response_class(
+                response=json.dumps({'message': 'must be pass valid json'}, default=np_encoder, indent=4),
+                mimetype='application/json'
+            )
+            return response
+
 @app.route('/leavemanagement/login')
 def login():
     return ""
+
+@app.route('/leavemanagement/employee' ,methods=['POST'])
+def createuser():
+    if request.method == 'POST':
+        try:
+            if "application/json" == request.headers["Content-Type"]:
+                status, msg = leave_register.validateUser(request)
+                if status == False:
+                    response = app.response_class(
+                        response=json.dumps({'message': msg}, default=np_encoder, indent=4),
+                        mimetype='application/json'
+                    )
+                    return response
+                try:
+                    data = employee.createEmployee(request)
+                    response = app.response_class(
+                        response=json.dumps(data , default=np_encoder,indent=4),
+                        mimetype='application/json'
+                    )
+                    return response
+                except Exception as e:
+                    print(str(e))
+
+        except Exception as e:
+            print(str(e))
+            response = app.response_class(
+                response=json.dumps({'message': 'must be pass valid json'}, default=np_encoder, indent=4),
+                mimetype='application/json'
+            )
+            return response
 
 @app.route('/leavemanagement/ragister' , methods=['POST'])
 def register():
@@ -39,7 +103,7 @@ def register():
                 try:
                     data = leave_register.createSuperUSer(request)
                     response = app.response_class(
-                        response=json.dumps("{'message': 'success'}" , default=np_encoder,indent=4),
+                        response=json.dumps(data , default=np_encoder,indent=4),
                         mimetype='application/json'
                     )
                     return response
